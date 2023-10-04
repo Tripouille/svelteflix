@@ -39,8 +39,8 @@
 
 	.logo {
 		position: absolute;
-		bottom: 5%;
-		right: 5%;
+		bottom: 2rem;
+		right: 2rem;
 		width: 40%;
 		filter: drop-shadow(0 0 1rem gray);
 	}
