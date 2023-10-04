@@ -3,7 +3,7 @@
 </script>
 
 <nav>
-    <a href="/" aria-label="svelteFlix"><img height="20" src="/images/netflix.svg" alt="svelteFlix"></a>
+    <a href="/" aria-label="svelteFlix"><img height="20" src="/images/svelteflix.svg" alt="svelteFlix"></a>
     <div class="links">
         <a href="/search">Search</a>
         <a href="/watchlist">Watchlist</a>
