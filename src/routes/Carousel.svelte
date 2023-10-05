@@ -1,12 +1,18 @@
 <script lang="ts">
 	import { media } from '$lib/api';
-	import type { MovieListResult } from '$lib/types';
+	import type { ViewWithResults } from '$lib/views';
 
-	export let movies: MovieListResult[];
+	export let view: ViewWithResults;
 </script>
 
+<h2>
+	{view.title}
+	{#if view.href}
+		<a href={view.href}>see all</a>
+	{/if}
+</h2>
 <div class="carousel">
-	{#each movies as movie}
+	{#each view.results as movie}
 		<a href="movie/{movie.id}">
 			<img alt={movie.title} src={media(movie.poster_path, 500)} />
 		</a>
