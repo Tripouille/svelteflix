@@ -22,7 +22,7 @@ html {
 }
 
 body {
-	min-height: 100vh;
+	height: 100vh;
 	width: var(--column);
 	display: flex;
 	flex-direction: column;

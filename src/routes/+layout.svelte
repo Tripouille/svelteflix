@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import '../styles.css';
 </script>
 
@@ -13,7 +14,7 @@
 	</div>
 </nav>
 
-<main>
+<main class:infinite={$page.data.infinite}>
 	<slot />
 </main>
 
@@ -30,6 +31,7 @@
 
 <style>
 	nav {
+		flex-shrink: 0;
 		display: flex;
 		width: 100%;
 		justify-content: space-between;
@@ -48,8 +50,10 @@
 		text-decoration: none;
 	}
 
-	main {
+	main.infinite {
 		flex: 1;
+		height: 0;
+		overflow: hidden;
 	}
 
 	footer {
