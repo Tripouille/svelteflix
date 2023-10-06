@@ -9,7 +9,7 @@
 	$: logo = images.logos.find((image) => image.iso_639_1 === 'en') ?? images.logos[0];
 </script>
 
-<a href="/movie/{movie.id}">
+<a href="/movies/{movie.id}">
 	<img
 		style="aspect-ration: {backdrop.aspect_ratio}"
 		class="backdrop"

@@ -13,7 +13,7 @@
 </h2>
 <div class="carousel">
 	{#each view.results as movie}
-		<a href="movie/{movie.id}">
+		<a href="movies/{movie.id}">
 			<img alt={movie.title} src={media(movie.poster_path, 500)} />
 		</a>
 	{/each}
