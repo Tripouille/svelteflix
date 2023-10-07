@@ -18,12 +18,15 @@
 
 <style>
     .hero {
+        position: relative;
         display: grid;
         background: black;
     }
 
     .backdrop img {
-            width: 100%;
+        display: block;
+        height: 100%;
+        width: 100%;
     }
 
 
@@ -35,7 +38,7 @@
         content: '';
         position: absolute;
         width: 100%;
-        height: 5rem;
+        height: 8rem;
         bottom: 0;
         left: 0;
         background: linear-gradient(to top, black, transparent);
@@ -50,19 +53,41 @@
             z-index: 1;
     }
 
+    
+    .info * {
+        margin: 0;
+    }
+
     @media (min-width: 50rem) {
         .hero {
-            grid-template-columns: 1fr 50rem;
+            grid-template-columns: 1fr 60rem;
             grid-template-rows: auto;
-        }
-
-        .info * {
-            margin: 0;
         }
 
         .backdrop {
             position: relative;
             grid-column: 2/3;
+            height: 100%;
+        }
+
+        .backdrop::after {
+            width: 15rem;
+            height: 100%;
+            left: 0;
+            bottom: 0;
+            background: linear-gradient(to right, black, transparent);
+        }
+
+        .info {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40rem;
+            height: 100%;
+            grid-column: 1/2;
+            margin-top: 0;
+            justify-content: center;
+            filter: drop-shadow(0 0 1.5rem black);
         }
     }
 </style>
